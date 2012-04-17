@@ -1,19 +1,15 @@
 <html>
   <head>
-    <style>
-    body { 
-      font-family: Verdana, Arial, sans-serif;
-      background: 99CCFF;
-    </style>
+    <link rel="stylesheet" type="text/css" href="brant.css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     </head>
     <body>
-      <div class="business_card" style="width:80%; margin-right: auto; margin-left: auto; background: 0099FF; margin-top: 5%; margin-bottom: auto;">
-        <div class="top" style="text-align: center;">
-          <div class="header" style="font-size: 2em;">Brant Olsen</div>
-          <div class="title" style="font-size: .8em;">Software Developer</div>
-          <div class="email" style="font-size: .8em;">brantolsen@gmail.com</div>
+      <div class="business_card">
+        <div class="top">
+          <div class="header">Brant Olsen</div>
+          <div class="title">Software Developer</div>
+          <div class="email title">brantolsen@gmail.com</div>
         </div>
 
         <table width=100%>
@@ -23,12 +19,12 @@
           </tr>
           <tr>
             <td colspan=2 width=100% style="text-align: center;">
-              <div id="profile_content" style="display: none;">
+              <div id="profile_content">
                 <a href="www.LinkedIn.com">LinkedIn</a><br>
                 <a href="www.facebook.com">FaceBook</a><br>
                 <a href="www.StackOverflow.com">StackOverflow</a>
               </div>
-              <div id="projects_content" style="display: none;">
+              <div id="projects_content">
                 Project 1<br>
                 Project 2<br>
               </div>
@@ -36,7 +32,6 @@
           </tr>
         </table>
       </div>
-      <script src="jquery-1.7.2.min.js"></script>
       <script>
 
         $("#profiles").click(function(){

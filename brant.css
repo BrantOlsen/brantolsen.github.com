@@ -1,0 +1,44 @@
+    body { 
+      font-family: Verdana, Arial, sans-serif;
+      background: 99CCFF;
+    }
+    
+    .business_card {
+      width:80%; 
+      margin-right: auto; 
+      margin-left: auto; 
+      background: #0099FF; 
+      margin-top: 5%;
+    }
+    
+    .top {
+      text-align: center;
+    }
+    
+    .header {
+      font-size: 2em;
+    }
+    
+    .title {
+      font-size: .8em;
+    }
+    
+    .email {
+      
+    }
+    
+    #profiles {
+      
+    }
+       
+    #profile_content {
+      display: none;
+    }
+    
+    #projects {
+      
+    }
+ 
+    #projects_content {
+      display: none;
+    }
