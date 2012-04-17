@@ -1,8 +1,54 @@
 <html>
-  <head>Brant's Home</head>
-  <body>
-    
-    <h2>Welcome</h2>
-    
-  </body>
-</html>
+  <head>
+    <style>
+    body { 
+      font-family: Verdana, Arial, sans-serif;
+      background: 99CCFF;
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    </head>
+    <body>
+      <div class="business_card" style="width:80%; margin-right: auto; margin-left: auto; background: 0099FF; margin-top: 5%; margin-bottom: auto;">
+        <div class="top" style="text-align: center;">
+          <div class="header" style="font-size: 2em;">Brant Olsen</div>
+          <div class="title" style="font-size: .8em;">Software Developer</div>
+          <div class="email" style="font-size: .8em;">brantolsen@gmail.com</div>
+        </div>
+
+        <table width=100%>
+          <tr>
+            <td style="text-align:left;"><div id="profiles">Profiles</div></td>
+            <td style="text-align:right;"><div id="projects">Projects</div></td>
+          </tr>
+          <tr>
+            <td colspan=2 width=100% style="text-align: center;">
+              <div id="profile_content" style="display: none;">
+                <a href="www.LinkedIn.com">LinkedIn</a><br>
+                <a href="www.facebook.com">FaceBook</a><br>
+                <a href="www.StackOverflow.com">StackOverflow</a>
+              </div>
+              <div id="projects_content" style="display: none;">
+                Project 1<br>
+                Project 2<br>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script src="jquery-1.7.2.min.js"></script>
+      <script>
+
+        $("#profiles").click(function(){
+          $("#profile_content").slideDown();
+          $("#projects_content").slideUp();
+        });
+
+        $("#projects").click(function(){
+          $("#profile_content").slideUp();
+          $("#projects_content").slideDown();
+        });
+
+      </script>
+    </body>
+  </html>
