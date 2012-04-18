@@ -3,47 +3,66 @@
     <link rel="stylesheet" type="text/css" href="brant.css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    </head>
-    <body>
-      <div class="business_card">
-        <div class="top">
-          <div class="header">Brant Olsen</div>
-          <div class="title">Software Developer</div>
-          <div class="email title">brantolsen@gmail.com</div>
-        </div>
-
-        <table width=100%>
-          <tr>
-            <td style="text-align:left;"><div id="profiles">Profiles</div></td>
-            <td style="text-align:right;"><div id="projects">Projects</div></td>
-          </tr>
-          <tr>
-            <td colspan=2 width=100% style="text-align: center;">
-              <div id="profile_content">
-                <a href="www.LinkedIn.com">LinkedIn</a><br>
-                <a href="www.facebook.com">FaceBook</a><br>
-                <a href="www.StackOverflow.com">StackOverflow</a>
-              </div>
-              <div id="projects_content">
-                Project 1<br>
-                Project 2<br>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <script>
-
-        $("#profiles").click(function(){
-          $("#profile_content").slideDown();
-          $("#projects_content").slideUp();
-        });
-
-        $("#projects").click(function(){
-          $("#profile_content").slideUp();
-          $("#projects_content").slideDown();
-        });
-
+    
+      <script type="text/javascript">
+      window.___gcfg = {lang: 'en'};
+      (function() 
+      {var po = document.createElement("script");
+      po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(po, s);
+      })();
       </script>
-    </body>
-  </html>
+  </head>
+  <body>
+    <div class="business_card">
+      <div class="top">
+        <div class="header">Brant Olsen</div>
+        <div class="title">Software Developer</div>
+        <div class="email title">brantolsen@gmail.com</div>
+      </div>
+          
+      <table width=100%>
+        <tr>
+          <td style="text-align:left;"><div id="profiles">Profiles</div></td>
+          <td style="text-align:right;"><div id="projects">Projects</div></td>
+        </tr>
+       <!-- <tr>
+          <td colspan=2 width=100% style="text-align: center;">
+            <div id="profile_content">
+             </div>
+            <div id="projects_content">
+              Project 1<br>
+              Project 2<br>
+            </div>
+          </td>
+        </tr>-->
+        <tr>
+          <td style="text-align:left;">  
+            <a href="http://stackoverflow.com/users/1299073/brant-olsen">
+              <img src="http://stackoverflow.com/users/flair/1299073.png?theme=dark" width="208" height="58" alt="profile for Brant Olsen at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Brant Olsen at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+            </a>
+          </td>
+          <td style="text-align:center;">
+            <a href="http://www.linkedin.com/in/brantolsen" style="text-decoration:none;"><span style="font: 80% Arial,sans-serif; color:#0783B6;"><img src="http://www.linkedin.com/img/webpromo/btn_in_20x15.png" alt="View Brant Olsen's LinkedIn profile" style="vertical-align:middle" border="0">View Brant Olsen's profile</span></a><br>
+          </td>
+          <td style="text-align: right;"> 
+            <g:plus href="https://plus.google.com/104241810880602297864" rel="author" width="300" height="69"></g:plus><br>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      $("#profiles").click(function(){
+        $("#profile_content").slideDown();
+        $("#projects_content").slideUp();
+      });
+      
+      $("#projects").click(function(){
+        $("#profile_content").slideUp();
+        $("#projects_content").slideDown();
+      });
+      
+    </script>
+  </body>
+</html>
