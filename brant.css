@@ -4,13 +4,20 @@ body {
 }
 
 .business_card {
+  /** Position and Size **/
   width:80%; 
   margin-right: auto; 
   margin-left: auto; 
-  background: #0099FF; 
   margin-top: 5%;
+  
+  /** Formatting **/
+  background: #0099FF; 
+  padding: 7px 7px 7px 7px;
+  
+  /** Fancy Effects **/
   border-radius: 5px;
   -moz-border-radius: 5px;
+  box-shadow: 10px 10px 5px #888888;
 }
 
 .top {
