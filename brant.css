@@ -3,6 +3,15 @@ body {
   background: #99CCFF;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background: #99CCFF;
+}
+
 .business_card {
   /** Position and Size **/
   width:80%; 
@@ -39,6 +48,7 @@ body {
 
 #profiles {
   cursor: pointer;
+  font-weight: bold;
 }
 
 #profiles:hover {
@@ -50,16 +60,9 @@ body {
   padding: 10px 5px 10px 5px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-a:hover {
-  background: #99CCFF;
-}
-
 #projects {
   cursor: pointer;
+  font-weight: bold;
 }
 
 #projects:hover {
@@ -69,8 +72,6 @@ a:hover {
 #projects_content {
   display: none;
 }
-
-
 
 .footer {
 
