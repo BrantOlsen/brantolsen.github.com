@@ -1,5 +1,5 @@
 body { 
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
   background: #99CCFF;
 }
 
@@ -14,7 +14,9 @@ a:hover {
 
 .business_card {
   /** Position and Size **/
-  width:80%; 
+  width:50%;
+  min-width: 500px;
+  max-width: 500px;
   margin-right: auto; 
   margin-left: auto; 
   margin-top: 5%;
