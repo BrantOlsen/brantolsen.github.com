@@ -3,18 +3,12 @@
     <link rel="stylesheet" type="text/css" href="brant.css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    
-      <script type="text/javascript">
-      window.___gcfg = {lang: 'en'};
-      (function() 
-      {var po = document.createElement("script");
-      po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(po, s);
-      })();
-      </script>
+    <script src="https://raw.github.com/BrantOlsen/game-of-life/master/game-of-life.js"></script>
   </head>
   <body>
+    <div class="background">
+      <canvas id="theCanvas"></canvas>
+    </div>
     <div class="business_card">
       <div class="top">
         <div class="header">Brant Olsen</div>
@@ -57,6 +51,26 @@
         $("#projects_content").slideDown();
       });
       
+  var board = null;
+  
+  $(document).ready(function() {
+    $(window).resize();
+  });
+
+  $(window).resize(function() {
+    var canvas = document.getElementById("theCanvas");
+    // Re-size the canvas to fit the whole screen. Do not use the JQuery selector here
+    // since we are changing the canvas's width and height not its css width and height.
+    canvas.width = $(".background").width();
+    canvas.height = $(".background").height();
+    var context = canvas.getContext("2d");
+
+    if (board == null)
+    {
+      board = new GameOfLife(context);
+    }
+  });
+
     </script>
   </body>
 </html>

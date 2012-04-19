@@ -12,6 +12,15 @@ a:hover {
   background: #99CCFF;
 }
 
+.background {
+  z-index: 0; 
+  width: 100%; 
+  height: 100%; 
+  position: absolute; 
+  top: 0px;
+  left: 0px;
+}
+
 .business_card {
   /** Position and Size **/
   width:50%;
@@ -20,6 +29,8 @@ a:hover {
   margin-right: auto; 
   margin-left: auto; 
   margin-top: 5%;
+  z-index: 5;
+  position: relative; /** Needed to put the div on top of the canvas. **/
   
   /** Formatting **/
   background: #0099FF; 
