@@ -50,11 +50,11 @@ body {
   padding: 10px 5px 10px 5px;
 }
 
-#profile_content a {
+a {
   text-decoration: none;
   color: black;
 }
-#profile_content a:hover {
+a:hover {
   background: #99CCFF;
 }
 
