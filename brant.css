@@ -41,6 +41,7 @@ table a:hover {
   border-radius: 5px;
   -moz-border-radius: 5px;
   box-shadow: 0px 0px 70px #888888;
+  border: 2px solid black;
 }
 
 .top {
