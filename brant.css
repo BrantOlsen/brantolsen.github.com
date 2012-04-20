@@ -28,7 +28,7 @@ a:hover {
   max-width: 500px;
   margin-right: auto; 
   margin-left: auto; 
-  margin-top: 5%;
+  margin-top: 10%;
   z-index: 5;
   position: relative; /** Needed to put the div on top of the canvas. **/
   
