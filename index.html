@@ -42,6 +42,9 @@
     </div>
     
     <script>
+      // Global scope it so I can always find it.
+      var gol = null;
+      
       $("#profiles").click(function(){
         $("#profile_content").slideDown();
         $("#projects_content").slideUp();
@@ -52,9 +55,20 @@
         $("#projects_content").slideDown();
       });
       
-      // Global scope it so I can always find it.
-      var gol = null;
-
+      // Allow the user to click on the canvas to add cells.
+      $("#theCanvas").click(function(event) {
+        gol.fillByClick(event);
+      });
+      
+      // Toggle the update of the cells on space bar click.
+      $(document).keyup(function(event) {
+        // space bar
+        if (event.keyCode == 32)
+        {
+          gol.toggle();
+        }
+      });
+      
       // Need to initialize the Game of Life on load.
       $(document).ready(function() {
         $(window).resize();
