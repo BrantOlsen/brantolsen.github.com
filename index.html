@@ -87,14 +87,15 @@
 
         if (gol == null)
         {
-          gol = new GameOfLife(context, {cellSize: 10, 
-                                         updateInterval: 100,
+          gol = new GameOfLife(context, {cellSize: 5, 
+                                         updateInterval: 50,
                                          color: "white"});
           gol.start();
         }
         
         var rowStart = Math.floor(gol.board.rows * .45);
-        var colStart = Math.floor(gol.board.columns * .35);
+        var colStart = Math.floor(gol.board.columns * .4);
+        gol.resize();
         gol.createGliderGun(rowStart, colStart);
         gol.fillCells();
       });
