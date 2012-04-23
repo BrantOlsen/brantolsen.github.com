@@ -88,16 +88,14 @@
         if (gol == null)
         {
           gol = new GameOfLife(context, {cellSize: 10, 
-                                         updateInterval: 1000,
+                                         updateInterval: 100,
                                          color: "white"});
           gol.start();
         }
         
-        var rowStart = Math.floor(gol.board.rows * .3);
-        var colStart = Math.floor(gol.board.columns * .4);
+        var rowStart = Math.floor(gol.board.rows * .45);
+        var colStart = Math.floor(gol.board.columns * .35);
         gol.createGliderGun(rowStart, colStart);
-        gol.createGlider(rowStart*2, colStart*2);
-        gol.createGlider(rowStart*2, colStart/2);
         gol.fillCells();
       });
     </script>
