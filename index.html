@@ -44,6 +44,21 @@
     </div>
     
     <script>
+      // Add a new getInt function that ensures we always get the value
+      // as an integer or 0 if the value is not set.
+      Storage.prototype.getInt = function(key)
+      {
+        var myInt = localStorage.getItem(key);
+        if (myInt == null)
+        {
+          return 0;  
+        }
+        return parseInt(myInt);
+      }
+      
+      // Keep track of the number of visits for this user.
+      localStorage.setItem("visits", localStorage.getInt("visits")+1);
+      
       // Global scope it so I can always find it.
       var gol = null;
       
@@ -59,13 +74,16 @@
       
       // Allow the user to click on the canvas to add cells.
       $("#theCanvas").click(function(event) {
-        gol.fillByClick(event);
+        if (gol != null)
+        {
+          gol.fillByClick(event);
+        }
       });
       
       // Toggle the update of the cells on space bar click.
       $(document).keyup(function(event) {
         // space bar
-        if (event.keyCode == 32)
+        if (gol != null && event.keyCode == 32)
         {
           gol.toggle();
         }
@@ -86,19 +104,23 @@
         canvas.height = $(".background").height();
         var context = canvas.getContext("2d");
 
-        if (gol == null)
+        // Do different animations in the background based on the number of vists.
+        if (localStorage.getInt("visits") % 2 == 0)
         {
-          gol = new GameOfLife(context, {cellSize: 5, 
-                                         updateInterval: 50,
-                                         color: "white"});
-          gol.start();
+          if (gol == null)
+          {
+            gol = new GameOfLife(context, {cellSize: 5, 
+                                          updateInterval: 50,
+                                          color: "white"});
+            gol.start();
+          }
+
+          var rowStart = Math.floor(gol.board.rows * .45);
+          var colStart = Math.floor(gol.board.columns * .4);
+          gol.resize();
+          gol.createGliderGun(rowStart, colStart);
+          gol.fillCells();
         }
-        
-        var rowStart = Math.floor(gol.board.rows * .45);
-        var colStart = Math.floor(gol.board.columns * .4);
-        gol.resize();
-        gol.createGliderGun(rowStart, colStart);
-        gol.fillCells();
       });
     </script>
   </body>
