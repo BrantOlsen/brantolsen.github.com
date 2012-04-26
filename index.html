@@ -4,6 +4,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script src="https://raw.github.com/BrantOlsen/game-of-life/master/game-of-life.js"></script>
+    <script src="https://raw.github.com/BrantOlsen/random-growth/master/random-growth.js"></script>
   </head>
   <body>
     <div class="background">
@@ -59,8 +60,9 @@
       // Keep track of the number of visits for this user.
       localStorage.setItem("visits", localStorage.getInt("visits")+1);
       
-      // Global scope it so I can always find it.
+      // Global scope it so I can always find these.
       var gol = null;
+      var randomGrowth = null;
       
       $("#profiles").click(function(){
         $("#profile_content").slideDown();
@@ -120,6 +122,13 @@
           gol.resize();
           gol.createGliderGun(rowStart, colStart);
           gol.fillCells();
+        }
+        else
+        {
+          if (randomGrowth == null)
+          {
+            randomGrowth = new RandomGrowth(context);
+          }
         }
       });
     </script>
