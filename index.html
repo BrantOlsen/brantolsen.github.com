@@ -3,22 +3,22 @@
     <link rel="stylesheet" type="text/css" href="brant.css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    <script src="https://raw.github.com/BrantOlsen/game-of-life/master/game-of-life.js"></script>
-    <script src="https://raw.github.com/BrantOlsen/random-growth/master/random-growth.js"></script>
+    <script src="./game-of-life.js"></script>
+    <script src="./random-growth.js"></script>
 
     <!-- Google Analytics -->
     <script type="text/javascript">
-      
+
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31374609-1']);
       _gaq.push(['_trackPageview']);
-      
+
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-      
+
     </script>
   </head>
   <body>
@@ -31,7 +31,7 @@
         <div class="title">Software Developer</div>
         <div class="email title">brantolsen@gmail.com</div>
       </div>
-          
+
       <table width=100%>
         <tr>
           <td style="text-align:left;"><div id="profiles" title="Show My Profiles">Profiles</div></td>
@@ -55,13 +55,13 @@
           </td>
         </tr>
       </table>
-      <div class="footer">            
+      <div class="footer">
         <a href="http://stackoverflow.com/users/1299073/brant-olsen">
           <img src="http://stackoverflow.com/users/flair/1299073.png?theme=dark" width="208" height="58" title="Profile for Brant Olsen at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Brant Olsen at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
         </a>
       </div>
     </div>
-    
+
     <script>
       // Add a new getInt function that ensures we always get the value
       // as an integer or 0 if the value is not set.
@@ -70,28 +70,28 @@
         var myInt = localStorage.getItem(key);
         if (myInt == null)
         {
-          return 0;  
+          return 0;
         }
         return parseInt(myInt);
       }
-      
+
       // Keep track of the number of visits for this user.
       localStorage.setItem("visits", localStorage.getInt("visits")+1);
-      
+
       // Global scope it so I can always find these.
       var gol = null;
       var randomGrowth = null;
-      
+
       $("#profiles").click(function(){
         $("#profile_content").slideDown();
         $("#projects_content").slideUp();
       });
-      
+
       $("#projects").click(function(){
         $("#profile_content").slideUp();
         $("#projects_content").slideDown();
       });
-      
+
       // Allow the user to click on the canvas to add cells.
       $("#theCanvas").click(function(event) {
         if (gol != null)
@@ -99,7 +99,7 @@
           gol.fillByClick(event);
         }
       });
-      
+
       // Toggle the update of the cells on space bar click.
       $(document).keyup(function(event) {
         // space bar
@@ -108,7 +108,7 @@
           gol.toggle();
         }
       });
-      
+
       // Need to initialize the Game of Life on load.
       $(document).ready(function() {
         $(window).resize();
@@ -129,7 +129,7 @@
         {
           if (gol == null)
           {
-            gol = new GameOfLife(context,{cellSize: 5, 
+            gol = new GameOfLife(context,{cellSize: 5,
                                           updateInterval: 50,
                                           color: "white"});
             gol.start();
