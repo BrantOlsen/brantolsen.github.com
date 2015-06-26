@@ -6,7 +6,7 @@ function RandomGrowth(context, settings)
   this.settings.spawnRate = this.settings.spawnRate || 0.05;
   this.settings.spawnLife = this.settings.spawnLife || 10;
   this.settings.speed = this.settings.speed || 50;
-  this.settings.type = this.settings.type || "DrawTrdee";
+  this.settings.type = this.settings.type || "DrawTree";
 
   this.percentFromSides = 0.05;
 

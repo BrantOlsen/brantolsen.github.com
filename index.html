@@ -122,32 +122,22 @@
         // since we are changing the canvas's width and height not its css width and height.
         canvas.width = $(".background").width();
         canvas.height = $(".background").height();
-        var context = canvas.getContext("2d");
+//        var context = canvas.getContext("2d");
+        var context = $('body');
 
-        // Do different animations in the background based on the number of vists.
-        if (localStorage.getInt("visits") % 2 == 0)
+        if (gol == null)
         {
-          if (gol == null)
-          {
-            gol = new GameOfLife(context,{cellSize: 5,
-                                          updateInterval: 50,
-                                          color: "white"});
-            gol.start();
-          }
+          gol = new GameOfLife(context,{cellSize: 5,
+                                        updateInterval: 50,
+                                        color: "white"});
+          gol.start();
+        }
 
-          var rowStart = Math.floor(gol.board.rows * .45);
-          var colStart = Math.floor(gol.board.columns * .5);
-          gol.resize();
-          gol.createAcorn(rowStart, colStart);
-          gol.fillCells();
-        }
-        else
-        {
-          if (randomGrowth == null)
-          {
-            randomGrowth = new RandomGrowth(context);
-          }
-        }
+        var rowStart = Math.floor(gol.board.rows * .45);
+        var colStart = Math.floor(gol.board.columns * .5);
+        gol.resize();
+        gol.createAcorn(rowStart, colStart);
+        gol.fillCells();      
       });
     </script>
   </body>
