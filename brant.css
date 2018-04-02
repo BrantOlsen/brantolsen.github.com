@@ -88,6 +88,14 @@ table a:hover {
   display: none;
 }
 
+.info-text {
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: .8em;
+}
+
 .footer {
 
 }

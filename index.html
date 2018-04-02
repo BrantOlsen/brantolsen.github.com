@@ -1,10 +1,10 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="brant.css"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    <script src="./game-of-life.js"></script>
-    <script src="./random-growth.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="game-of-life.js"></script>
+    <script src="random-growth.js"></script>
 
     <!-- Google Analytics -->
     <script type="text/javascript">
@@ -56,12 +56,26 @@
         </tr>
       </table>
       <div class="footer">
-        <a href="http://stackoverflow.com/users/1299073/brant-olsen">
-          <img src="http://stackoverflow.com/users/flair/1299073.png?theme=dark" width="208" height="58" title="Profile for Brant Olsen at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Brant Olsen at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+        <a href="//stackoverflow.com/users/1299073/brant-olsen">
+          <img src="//stackoverflow.com/users/flair/1299073.png?theme=dark" width="208" height="58" title="Profile for Brant Olsen at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Brant Olsen at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
         </a>
       </div>
     </div>
+    
+    <div class="info-text">
+      Use spacebar to pause the simulation.
+    </div>
 
+    <script>
+      // Check that service workers are registered
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+    
     <script>
       // Add a new getInt function that ensures we always get the value
       // as an integer or 0 if the value is not set.
@@ -122,8 +136,8 @@
         // since we are changing the canvas's width and height not its css width and height.
         canvas.width = $(".background").width();
         canvas.height = $(".background").height();
-//        var context = canvas.getContext("2d");
-        var context = $('body');
+        var context = canvas.getContext("2d");
+//        var context = $('body');
 
         if (gol == null)
         {
