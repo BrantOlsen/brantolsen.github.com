@@ -1,14 +1,15 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="brant.css"/>
-    <script src="jquery-3.3.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="jquery-ui.min.js"></script>
     <script src="game-of-life.js"></script>
     <script src="random-growth.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/BrantOlsen/christmas-js/dist/christmas.js"></script>
 
     <!-- Google Analytics -->
     <script type="text/javascript">
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-31374609-1']);
       _gaq.push(['_trackPageview']);
@@ -18,10 +19,21 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>
   </head>
   <body>
+    <script>
+      let t = new SnowStorm();
+        t.startSnow();
+
+        var lights = [
+          new LightString(LightLocation.Bottom),
+          new LightString(LightLocation.Top),
+          new LightString(LightLocation.Right),
+          new LightString(LightLocation.Left)
+        ];
+    </script>
+
     <div class="background">
       <canvas id="theCanvas"></canvas>
     </div>
@@ -40,17 +52,14 @@
         <tr>
           <td colspan=2 width=100% style="text-align: center;">
             <div id="profile_content">
-	     <a href="https://docs.google.com/document/d/1ieb04HVKXvA5VFNpOckJEEh3yhhC-Ec-aTittlac5Y4/edit?pli=1" title="My most up-to-date resume.">Resume</a><br>
-             <a href="http://www.linkedin.com/in/brantolsen" title="My Work and School history.">LinkedIn</a><br>
-             <a href="https://plus.google.com/104241810880602297864" title="Find Google+ connections with me.">Google+</a><br>
-             <a href="http://www.facebook.com/BrantOlsen" title="Find Facebook connections with me.">Facebook</a><br>
-             <a href="http://jsfiddle.net/user/brantolsen/fiddles/" title="Some Javascript doodles.">JSFiddle</a><br>
-             <a href="http://steamcommunity.com/profiles/76561197991893791" title="My favorite games.">Steam</a><br>
+              <a href="https://docs.google.com/document/d/1ieb04HVKXvA5VFNpOckJEEh3yhhC-Ec-aTittlac5Y4/edit?pli=1" title="My most up-to-date resume.">Resume</a><br>
+             <a href="https://www.linkedin.com/in/brantolsen" title="Work and School history.">LinkedIn</a><br>
+             <a href="https://jsfiddle.net/user/brantolsen/fiddles/" title="Some Javascript doodles.">JSFiddle</a><br>
             </div>
             <div id="projects_content">
-              <a href="http://brantolsen.github.com/game-of-life/" title="Javascript implementation of Conway's Game of Life.">Game Of Life</a><br>
-              <a href="http://brantolsen.github.com/random-growth/" title="Create images from random recursion.">Random Growth</a><br>
-              <a href="http://brantolsen.github.com/street-fighter-random/" title="Simple Web App to select a random character from a subset.">SF Character Chooser</a><br>
+              <a href="https://brantolsen.github.com/game-of-life/" title="Javascript implementation of Conway's Game of Life.">Game Of Life</a><br>
+              <a href="https://brantolsen.github.com/random-growth/" title="Create images from random recursion.">Random Growth</a><br>
+              <a href="https://brantolsen.github.com/christmas-js/" title="Christmas lights and snow for a webpage.">Webpage Christmas Lights</a><br>
             </div>
           </td>
         </tr>

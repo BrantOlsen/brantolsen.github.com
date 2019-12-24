@@ -57,13 +57,11 @@ table a:hover {
   font-size: .7em;
 }
 
-.email {
-
-}
-
 #profiles {
   cursor: pointer;
   font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 #profiles:hover {
@@ -78,6 +76,8 @@ table a:hover {
 #projects {
   cursor: pointer;
   font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 #projects:hover {
@@ -94,8 +94,4 @@ table a:hover {
   bottom: 0px;
   left: 0px;
   font-size: .8em;
-}
-
-.footer {
-
 }
