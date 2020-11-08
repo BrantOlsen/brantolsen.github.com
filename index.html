@@ -3,7 +3,7 @@
     <link rel="stylesheet" type="text/css" href="brant.css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="game-of-life.js"></script>
     <script src="random-growth.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/BrantOlsen/christmas-js@master/dist/christmas.js"></script>
@@ -23,7 +23,7 @@
   </head>
   <body>
     <script>
-      let t = new SnowStorm();
+      /*let t = new SnowStorm();
         t.startSnow();
 
         var lights = [
@@ -31,7 +31,7 @@
           new LightString(LightLocation.Top),
           new LightString(LightLocation.Right),
           new LightString(LightLocation.Left)
-        ];
+        ];*/
     </script>
 
     <div class="background">
@@ -52,7 +52,7 @@
         <tr>
           <td colspan=2 width=100% style="text-align: center;">
             <div id="profile_content">
-              <a href="https://docs.google.com/document/d/1ieb04HVKXvA5VFNpOckJEEh3yhhC-Ec-aTittlac5Y4/edit?pli=1" title="My most up-to-date resume.">Resume</a><br>
+	    <!--<a href="https://docs.google.com/document/d/1ieb04HVKXvA5VFNpOckJEEh3yhhC-Ec-aTittlac5Y4/edit?pli=1" title="My most up-to-date resume.">Resume</a><br>-->
              <a href="https://www.linkedin.com/in/brantolsen" title="Work and School history.">LinkedIn</a><br>
              <a href="https://jsfiddle.net/user/brantolsen/fiddles/" title="Some Javascript doodles.">JSFiddle</a><br>
             </div>
@@ -146,7 +146,6 @@
         canvas.width = $(".background").width();
         canvas.height = $(".background").height();
         var context = canvas.getContext("2d");
-//        var context = $('body');
 
         if (gol == null)
         {
